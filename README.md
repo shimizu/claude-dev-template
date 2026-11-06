@@ -50,7 +50,7 @@ claude-dev-template/scripts/apply-to-existing.sh <対象リポジトリ>
 | 変更の機械的な検査 | Haiku | `.claude/agents/audit.md` |
 
 - advisor を呼ぶタイミングは Claude が判断します。スキルは相談するよう指示していますが、確実な呼び出しを保証するものではありません。
-- advisor は Anthropic API でのみ使える実験的な機能で、呼び出すたびに Opus のトークンを消費します。短い作業では `/advisor off` で切れます。
+- advisor は実験的な機能で、サブスクリプションと API 課金のどちらでも使えます。Amazon Bedrock、Google Cloud、Microsoft Foundry 経由では使えません。呼び出すたびに Opus のトークンを消費します。短い作業では `/advisor off` で切れます。
 - `Explore.md` は組み込みの Explore を置き換えて Haiku で動かします。元に戻すときは、このファイルを削除します。
 - audit と Explore は書き込みツールを持ちませんが、Bash は使えるので、読み取り専用は指示に基づくものです。
 
